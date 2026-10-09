@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data directories (Parquet files, archives, and logs)
+*.parquet
+*.tmp
+*.zip
+*.tar.gz
+tf_1min_kline_data/
+funding_rate_data/
+funding/
+_orchestrator_logs/
+
+# Coverage and log reports
+coverage.csv
+funding_coverage.csv
+*.log
+bad_bars.log
+errors.log
+funding_errors.log
+funding_anomalies.log
+pipeline_queue.json
+pipeline_status.json
+_download_summary.json
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
