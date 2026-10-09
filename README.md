@@ -67,23 +67,34 @@ Set desired date range at the top of `crypto_alts_multi_exchange.json`:
 
 ## 🚀 Quickstart
 
-### 1. Installation
+### 1. Installation & Virtual Environment
 
+Using **Poetry** (recommended):
+```bash
+# Install dependencies
+poetry install
+
+# Run any script inside Poetry environment:
+poetry run python pipeline_orchestrator.py
+```
+
+Or using standard **pip**:
 ```bash
 pip install -r requirements.txt
+python pipeline_orchestrator.py
 ```
 
 ### 2. Run All Kline Downloads via Orchestrator
 
 ```bash
 # Run multi-exchange download queue with 2 concurrent processes:
-python pipeline_orchestrator.py --max-concurrent 2
+poetry run python pipeline_orchestrator.py --max-concurrent 2
 
 # Filter specific exchanges:
-python pipeline_orchestrator.py --exchanges binance,bybit,okx
+poetry run python pipeline_orchestrator.py --exchanges binance,bybit,okx
 
 # Override collection window dynamically:
-python pipeline_orchestrator.py --from "2026-08-01 00:00:00" --to "2026-10-01 00:00:00"
+poetry run python pipeline_orchestrator.py --from "2026-08-01 00:00:00" --to "2026-10-01 00:00:00"
 ```
 
 ### 3. Individual Exchange Downloads
